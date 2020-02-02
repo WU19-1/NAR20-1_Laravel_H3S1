@@ -39,7 +39,7 @@ class HomeController extends Controller
                     ['student_id','=',Auth::user()->id],
                     ['date','=',Carbon::now()->toDateString()]
                 ])->get();
-            dd($x);
+//             dd($x);
             return view('home',compact('x'));
         }
         abort(403);
