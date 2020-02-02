@@ -53,6 +53,8 @@
              "chmod -R 777 public/",
              "php artisan storage:link",
              "php artisan migrate:fresh --seed"
+             "chmod -R 755 storage/",
+             "chmod 755 storage",
         ]
     },
     "config": {
