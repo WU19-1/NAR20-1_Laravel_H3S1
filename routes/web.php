@@ -40,7 +40,7 @@ Route::group([],function(){
 Route::get('storage/{filename}',function ($filename){
     $path = storage_path('public/' . $filename);
     if(!File::exists($path)){
-        //error
+        abort(404);
     }
     $file = \File::get($path);
     $type = \File::mimeType($path);
