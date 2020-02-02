@@ -12,7 +12,7 @@ class StudentDetailSeeder extends Seeder
     public function run()
     {
         \App\StudentDetail::create([
-            'student_id' => 1,
+            'student_id' => 2,
             'image' => '',
             'motto' => 'I want to join SLC'
         ]);

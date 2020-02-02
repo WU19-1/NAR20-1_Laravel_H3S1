@@ -35,7 +35,10 @@ class HomeController extends Controller
         }
         else if(Auth::check()){
             $x = DB::table('schedules')->join('courses','schedules.course_id','=','courses.course_id')
-                ->where('student_id','=',Auth::user()->id)->where('date','=',Carbon::now()->toDateString())->get();
+                ->where([
+                    ['student_id','=',Auth::user()->id],
+                    ['date','=',Carbon::now()->toDateString()]
+                ])->get();
             return view('home',compact('x'));
         }
         abort(403);

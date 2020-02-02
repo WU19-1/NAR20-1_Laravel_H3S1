@@ -13,7 +13,7 @@
                 <input type="text" class="student" name="nim" id="nim" placeholder="Insert NIM"> <br>
                 <div class="errors">
                     @if($errors->any())
-                        <div class="error-text">{{$errors->first()}}    </div>
+                        <div class="error-text">{{$errors->first()}}</div>
                     @endif
                 </div>
                 <div class="success">
