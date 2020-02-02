@@ -15,9 +15,8 @@ Route::group([],function(){
     Route::get('/',function (){
         if(auth('admin')->check() || request()->hasCookie('rememeber') || auth()->check()){
             return redirect('/home');
-        }else{
-            return redirect('/login');
         }
+        return redirect('/login');
     });
 });
 
