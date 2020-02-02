@@ -13,7 +13,7 @@ class ScheduleSeeder extends Seeder
     {
         \App\Schedule::create([
             'student_id' => 2,
-            'course_id' => 1,
+            'course_id' => 2,
             'start_time' => '07:20',
             'end_time' => '11:00',
             'room' => '722',

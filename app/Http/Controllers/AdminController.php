@@ -98,7 +98,7 @@ class AdminController extends Controller
         ]);
         \App\Schedule::create([
             'student_id' => $user->id,
-            'course_id' => 1,
+            'course_id' => 42,
             'start_time' => '07:20',
             'end_time' => '11:00',
             'room' => '722',
@@ -108,7 +108,7 @@ class AdminController extends Controller
         ]);
         \App\Schedule::create([
             'student_id' => $user->id,
-            'course_id' => 4,
+            'course_id' => 32,
             'start_time' => '15:20',
             'end_time' => '17:00',
             'room' => '400',
@@ -128,7 +128,7 @@ class AdminController extends Controller
         ]);
         \App\Schedule::create([
             'student_id' => $user->id,
-            'course_id' => 5,
+            'course_id' => 12,
             'start_time' => '07:20',
             'end_time' => '09:00',
             'room' => '428',
@@ -138,7 +138,7 @@ class AdminController extends Controller
         ]);
         \App\Schedule::create([
             'student_id' => $user->id,
-            'course_id' => 3,
+            'course_id' => 22,
             'start_time' => '17:20',
             'end_time' => '19:00',
             'room' => '529',
