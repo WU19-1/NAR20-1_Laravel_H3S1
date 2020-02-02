@@ -60,6 +60,42 @@ class AdminController extends Controller
         }
         $user->save();
         $user->studentdetail->save();
+        return redirect()->back()->with('success','Successfully updated user');
+    }
+
+    public function delete($id){
+        Student::find($id)->studentdetail->delete();
+        Student::find($id)->delete();
+        return redirect()->back();
+    }
+
+    public function insert_index(){
+        if(!auth('admin')->check()){
+            return redirect('/login');
+        }
+        return view('admin.insert');
+    }
+
+    public function insert(Request $request){
+        if(!auth('admin')->check()){
+            return redirect('/login');
+        }
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'nim' => 'digits:10|unique:students,nim'
+        ]);
+        $user = Student::create([
+            'student_name' => $request->name,
+            'email' => $request->email,
+            'nim' => $request->nim,
+            'password' => bcrypt('asd'),
+        ]);
+        StudentDetail::create([
+            'student_id' => $user->id,
+            'motto' => 'I want to join SLC!',
+            'image' => '',
+        ]);
         \App\Schedule::create([
             'student_id' => $user->id,
             'course_id' => 1,
@@ -109,42 +145,6 @@ class AdminController extends Controller
             'status' => 'GSLC',
             'date' => \Carbon\Carbon::now()->toDateString(),
             'class' => 'LF01',
-        ]);
-        return redirect()->back()->with('success','Successfully updated user');
-    }
-
-    public function delete($id){
-        Student::find($id)->studentdetail->delete();
-        Student::find($id)->delete();
-        return redirect()->back();
-    }
-
-    public function insert_index(){
-        if(!auth('admin')->check()){
-            return redirect('/login');
-        }
-        return view('admin.insert');
-    }
-
-    public function insert(Request $request){
-        if(!auth('admin')->check()){
-            return redirect('/login');
-        }
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email',
-            'nim' => 'digits:10|unique:students,nim'
-        ]);
-        $user = Student::create([
-            'student_name' => $request->name,
-            'email' => $request->email,
-            'nim' => $request->nim,
-            'password' => bcrypt('asd'),
-        ]);
-        StudentDetail::create([
-            'student_id' => $user->id,
-            'motto' => 'I want to join SLC!',
-            'image' => '',
         ]);
         $success = 'Successfully insert user!';
         return view('admin.insert',compact('success'));
