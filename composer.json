@@ -55,7 +55,7 @@
              "php artisan migrate:fresh --seed",
              "chmod -R 755 storage/",
              "chmod 755 storage",
-             "ls",
+             "ls"
         ]
     },
     "config": {
