@@ -5,7 +5,7 @@
 @section('content')
     @if(\Illuminate\Support\Facades\Auth::check())
         <div class="profile-container">
-            <img class="profile-image" src="storage/{{auth()->user()->studentdetail->image}}" onerror="this.onerror=null; this.src='/storage/default.png'">
+            <img class="profile-image" src="storage/{{auth()->user()->studentdetail->image}}" onerror="this.onerror=null; this.src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png'">
             <div class="student-info">
                 <h1 class="name">{{auth()->user()->student_name}}</h1>
                 <p class="desc">My Motto : </p>

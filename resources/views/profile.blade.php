@@ -6,7 +6,7 @@
     <form action="" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <div class="profile-container">
-            <img class="profile-image" src="storage/{{auth()->user()->studentdetail->image}}" onerror="this.onerror=null; this.src='/storage/default.png'">
+            <img class="profile-image" src="storage/{{auth()->user()->studentdetail->image}}" onerror="this.onerror=null; this.src='https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png'">
             <div class="student-info">
                 <h3 class="name">{{auth()->user()->student_name}}</h3>
                 <p class="description">My Motto : </p>
