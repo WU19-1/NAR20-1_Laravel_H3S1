@@ -60,6 +60,56 @@ class AdminController extends Controller
         }
         $user->save();
         $user->studentdetail->save();
+        \App\Schedule::create([
+            'student_id' => $user->id,
+            'course_id' => 1,
+            'start_time' => '07:20',
+            'end_time' => '11:00',
+            'room' => '722',
+            'status' => 'Meeting',
+            'date' => \Carbon\Carbon::now()->toDateString(),
+            'class' => 'LB01',
+        ]);
+        \App\Schedule::create([
+            'student_id' => $user->id,
+            'course_id' => 4,
+            'start_time' => '15:20',
+            'end_time' => '17:00',
+            'room' => '400',
+            'status' => 'GSLC',
+            'date' => \Carbon\Carbon::now()->toDateString(),
+            'class' => 'LB01',
+        ]);
+        \App\Schedule::create([
+            'student_id' => $user->id,
+            'course_id' => 2,
+            'start_time' => '11:20',
+            'end_time' => '15:00',
+            'room' => '630',
+            'status' => 'Meeting',
+            'date' => \Carbon\Carbon::now()->toDateString(),
+            'class' => 'LB01',
+        ]);
+        \App\Schedule::create([
+            'student_id' => $user->id,
+            'course_id' => 5,
+            'start_time' => '07:20',
+            'end_time' => '09:00',
+            'room' => '428',
+            'status' => 'Meeting',
+            'date' => \Carbon\Carbon::now()->toDateString(),
+            'class' => 'LA01',
+        ]);
+        \App\Schedule::create([
+            'student_id' => $user->id,
+            'course_id' => 3,
+            'start_time' => '17:20',
+            'end_time' => '19:00',
+            'room' => '529',
+            'status' => 'GSLC',
+            'date' => \Carbon\Carbon::now()->toDateString(),
+            'class' => 'LF01',
+        ]);
         return redirect()->back()->with('success','Successfully updated user');
     }
 

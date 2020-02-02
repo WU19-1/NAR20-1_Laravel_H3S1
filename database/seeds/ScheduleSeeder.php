@@ -41,5 +41,25 @@ class ScheduleSeeder extends Seeder
             'date' => \Carbon\Carbon::now()->toDateString(),
             'class' => 'LB01',
         ]);
+        \App\Schedule::create([
+            'student_id' => 1,
+            'course_id' => 5,
+            'start_time' => '07:20',
+            'end_time' => '09:00',
+            'room' => '428',
+            'status' => 'Meeting',
+            'date' => \Carbon\Carbon::now()->toDateString(),
+            'class' => 'LA01',
+        ]);
+        \App\Schedule::create([
+            'student_id' => 1,
+            'course_id' => 3,
+            'start_time' => '17:20',
+            'end_time' => '19:00',
+            'room' => '529',
+            'status' => 'GSLC',
+            'date' => \Carbon\Carbon::now()->toDateString(),
+            'class' => 'LF01',
+        ]);
     }
 }

@@ -27,5 +27,9 @@ class CourseSeeder extends Seeder
             'course_name' => 'Database Systems',
             'course_code' => 'ISYS6169'
         ]);
+        \App\Course::create([
+            'course_name' => 'Discrete Mathematics',
+            'course_code' => 'MATH6025'
+        ]);
     }
 }

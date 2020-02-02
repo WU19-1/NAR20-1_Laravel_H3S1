@@ -14,7 +14,7 @@ class StudentDetailSeeder extends Seeder
         \App\StudentDetail::create([
             'student_id' => 1,
             'image' => '',
-            'motto' => 'Live life to the fullest !!'
+            'motto' => 'I want to join SLC'
         ]);
     }
 }
