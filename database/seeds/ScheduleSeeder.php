@@ -12,7 +12,7 @@ class ScheduleSeeder extends Seeder
     public function run()
     {
         \App\Schedule::create([
-            'student_id' => 1,
+            'student_id' => 2,
             'course_id' => 1,
             'start_time' => '07:20',
             'end_time' => '11:00',
@@ -22,7 +22,7 @@ class ScheduleSeeder extends Seeder
             'class' => 'LB01',
         ]);
         \App\Schedule::create([
-            'student_id' => 1,
+            'student_id' => 2,
             'course_id' => 4,
             'start_time' => '15:20',
             'end_time' => '17:00',
@@ -32,7 +32,7 @@ class ScheduleSeeder extends Seeder
             'class' => 'LB01',
         ]);
         \App\Schedule::create([
-            'student_id' => 1,
+            'student_id' => 2,
             'course_id' => 2,
             'start_time' => '11:20',
             'end_time' => '15:00',
@@ -42,7 +42,7 @@ class ScheduleSeeder extends Seeder
             'class' => 'LB01',
         ]);
         \App\Schedule::create([
-            'student_id' => 1,
+            'student_id' => 2,
             'course_id' => 5,
             'start_time' => '07:20',
             'end_time' => '09:00',
@@ -52,7 +52,7 @@ class ScheduleSeeder extends Seeder
             'class' => 'LA01',
         ]);
         \App\Schedule::create([
-            'student_id' => 1,
+            'student_id' => 2,
             'course_id' => 3,
             'start_time' => '17:20',
             'end_time' => '19:00',
