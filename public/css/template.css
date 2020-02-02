@@ -1,0 +1,403 @@
+*{
+    color: black;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+navbar{
+    width: 100vw;
+    height: 60px;
+    background-color: lightskyblue;
+    top: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.header-container{
+    display: flex;
+    color: whitesmoke;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+}
+
+.header-content {
+    margin-left: 1.5em;
+}
+
+.header-content>a:hover{
+    color: orange;
+    transition: color 0.7s;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-family: "Tekton Pro";
+    vertical-align: center;
+}
+
+.logout {
+    flex-grow: 1;
+    width: available;
+    text-align: right;
+    margin-right: 3em;
+}
+
+.footer{
+    height: 5vh;
+    width: 100vw;
+    background-color: lightskyblue;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer>p{
+    position: relative;
+}
+
+.profile-container{
+    display: flex;
+    flex-direction: row;
+    padding: 110px 90px 0px 90px;
+}
+
+.profile-image{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+
+
+.name{
+    font-size: 64px;
+}
+
+.desc{
+    word-wrap: normal;
+    font-size: 24px;
+}
+
+.schedule-container{
+    margin-top: 60px;
+    padding: 3vw;
+}
+
+.log-container{
+    margin-top: 60px;
+    padding: 3vw;
+}
+
+.content-container{
+    margin-top: 60px;
+    padding: 3vw;
+}
+
+.student-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.admin-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.admin-header button {
+    width: 150px !important;
+    background-color: #2a88bd;
+    padding: 15px 0 !important;
+}
+
+.admin-header button:active, .admin-header button:first-child:focus {
+    background-color: #1f6188;
+}
+
+
+main{
+    width: 100vw;
+    /*min-height: calc(100vh - 60px - 38px);*/
+    flex-grow: 1;
+}
+
+.table{
+    margin-top: 60px;
+    padding: 3vw;
+    text-align: left;
+    width: 100%;
+}
+
+.table th {
+    padding: .75rem;
+}
+
+.table thead th{
+    vertical-align: bottom;
+}
+
+
+.dark-header{
+    vertical-align: middle;
+    background-color: #12b24a;
+}
+.header{
+    color: whitesmoke;
+}
+
+.student-data{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+}
+
+.student-container{
+    border: 1px solid #b9b9b9;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.admin-info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-info-container .student-info{
+    margin: 2px 0;
+}
+
+.admin-info-container .student-info > i{
+    width: 1.5em;
+    text-align: center;
+}
+
+.student-info{
+    margin-left: 40px;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container button, .admin-header button {
+    width: 100px;
+    padding: 0.5em 0;
+    border: none;
+    margin: 3px 0;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-container button:first-child {
+    background-color: #00b20d;
+}
+
+.btn-container button:nth-child(2) {
+    background-color: #ff432e;
+}
+
+.btn-container button:first-child:active, .btn-container button:first-child:focus {
+    background-color: #00770d;
+}
+
+.btn-container button:nth-child(2):active, .btn-container button:nth-child(2):focus {
+    background-color: #94261a;
+}
+
+.insert-container{
+    margin-top: 60px;
+    padding: 3vw;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+}
+
+.insert-container > h1 {
+    margin-bottom: 15px;
+}
+
+.insert-form{
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-top: 15px;
+}
+
+.insert-form > .student {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #b2b2b2;
+    margin: 5px 5px;
+}
+
+.insert-form > button {
+    margin: 1.5rem 0;
+    border: none;
+    padding: 12px 4.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    color: white;
+    background-color: #007BFF;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.insert-container-and-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.error-text{
+    width: 100%;
+    border-radius: .25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    margin: 5px 0;
+    padding: 1em 0;
+    font-size: 15px;
+}
+
+.success-text{
+    width: 100%;
+    border-radius: .25rem;
+    color: #155724;
+    background-color: #d4edda;
+    margin: 5px 0;
+    padding: 1em 0;
+    font-size: 15px;
+}
+
+.table-user{
+    padding: 3vw;
+    text-align: left;
+    width: 100%;
+}
+
+.table-user th {
+    padding: .75rem;
+}
+
+.table-user thead th{
+    vertical-align: bottom;
+}
+
+.student-info > .desc{
+    width: 100%;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #b2b2b2;
+    margin: 5px 0px;
+}
+
+.image-uploader{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 90px 0px 90px;
+    justify-content: space-between;
+}
+
+.image-uploader > input {
+    width: 80%;
+}
+
+.update-btn{
+    margin: 5px 90px 20px 90px;
+    padding: 10px 4.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.errors{
+    margin: 3px 20px;
+    padding: 2px 4.5rem;
+    text-align: center;
+}
+
+.success{
+    margin: 3px 10px;
+    padding: 2px 4.5rem;
+    text-align: center;
+}
+
+.updatepw{
+    width: 20%;
+    padding: 8px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #b2b2b2;
+    margin: 5px 0px;
+}
+
+.update-pw-container{
+    padding: 20px 90px 0px 90px;
+}
+
+.update-pw-container > button{
+    margin: 5px 0px 20px 0px;
+    padding: 10px 4.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #007BFF;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.error-update{
+    width: 100%;
+    border-radius: .25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    margin: 5px 0;
+    padding: 1em 0;
+    font-size: 15px;
+}
+
+.success-update{
+    width: 100%;
+    border-radius: .25rem;
+    color: #155724;
+    background-color: #d4edda;
+    margin: 5px 0;
+    padding: 1em 0;
+    font-size: 15px;
+}
+
+.errors-update-container{
+    margin: 0;
+    text-align: center;
+}
+
+.success-update-container{
+    margin: 0;
+    text-align: center;
+}
